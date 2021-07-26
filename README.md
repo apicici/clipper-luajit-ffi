@@ -1,4 +1,4 @@
-# clipper-lua
+# clipper-luajit-ffi
 LuaJIT FFI bindings for the C++ version of [Angus Johnson's Clipper library](https://sourceforge.net/projects/polyclipping/).
 
 ## Pre-built binaries
