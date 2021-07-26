@@ -1,0 +1,7 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.1.0)
+PROJECT(clipper)
+
+INCLUDE_DIRECTORIES(src/clipper)
+ADD_LIBRARY(clipper SHARED src/clipper/clipper.cpp src/wrap.cpp)
+
+SET_TARGET_PROPERTIES(clipper PROPERTIES PREFIX "")
