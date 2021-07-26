@@ -16,7 +16,6 @@
     size_t PREFIX(type, capacity)(type* p) {return p->capacity();}\
     bool PREFIX(type, empty)(type* p) {return p->empty();}\
     void PREFIX(type, reserve)(type* p, size_t n) {p->reserve(n);}\
-    void PREFIX(type, shrink_to_fit)(type* p) {p->shrink_to_fit();}\
     \
     argtype& PREFIX(type, at)(type* p, size_t n) {return p->at(n);}\
     void PREFIX(type, _setitem)(type* p, size_t n, argtype v) {p->at(n) = v;}\

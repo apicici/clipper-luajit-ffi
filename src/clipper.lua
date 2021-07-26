@@ -21,7 +21,6 @@ local function vector_cdef(type, argtype)
         uint32_t ClipperLib_#type#_capacity(cl_#type#*);
         bool ClipperLib_#type#_empty(cl_#type#*);
         void ClipperLib_#type#_reserve(cl_#type#*, size_t);
-        void ClipperLib_#type#_shrink_to_fit(cl_#type#*);
         //
         cl_#argtype#& ClipperLib_#type#_at(cl_#type#*, size_t);
         void ClipperLib_#type#__setitem(cl_#type#*, size_t, cl_#argtype#);
@@ -201,7 +200,6 @@ local function wrap_vector(name, vecargtype)
     function methods:capacity() return C[prefix .. "capacity"](self.data) end
     function methods:empty() C[prefix .. "empty"](self.data) end
     function methods:reserve(n) C[prefix .. "empty"](self.data, n) end
-    function methods:shrink_to_fit() C[prefix .. "empty"](self.data) end
 
     function methods:at(n)
         local p =  C[prefix .. "at"](self.data, n)
